@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948894329642",
+    "project_id": "bdend-3bd0a",
+    "storage_bucket": "bdend-3bd0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948894329642:android:37c8a0e282bc1adbe50c53",
+        "android_client_info": {
+          "package_name": "com.ssc.end"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWQjGAuEp0eyDciKutvueMK2ai8IREI10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
