@@ -5,5 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="AppEnd" parent="Theme.End">
+        <item name="colorPrimary">@color/AzulClaro</item>
+        <item name="colorPrimaryDark">@color/AzulClaro</item>
+        <item name="colorAccent">@color/AzulOscuro</item>
+    </style>
+
     <style name="Theme.End" parent="Base.Theme.End" />
 </resources>
