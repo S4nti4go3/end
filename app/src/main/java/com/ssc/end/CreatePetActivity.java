@@ -34,8 +34,6 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
 public class CreatePetActivity extends AppCompatActivity {
 
     ImageView photo_pet;
@@ -121,7 +119,7 @@ public class CreatePetActivity extends AppCompatActivity {
             });
         }else{
             idd = id;
-            btn_add.setText("Update");
+            btn_add.setText("Actualizar");
             getPet(id);
             btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,7 +145,6 @@ public class CreatePetActivity extends AppCompatActivity {
 
         startActivityForResult(i, COD_SEL_IMAGE);
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -228,7 +225,7 @@ public class CreatePetActivity extends AppCompatActivity {
         mfirestore.collection("pet").document(id.getId()).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(getApplicationContext(), "Creado exitosamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Agregado exitosamente", Toast.LENGTH_SHORT).show();
                 finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
