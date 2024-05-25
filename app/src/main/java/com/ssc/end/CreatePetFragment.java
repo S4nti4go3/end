@@ -69,7 +69,7 @@ public class CreatePetFragment extends DialogFragment {
             });
         }else {
             getPet();
-            btn_add.setText("update");
+            btn_add.setText("Actualizar");
             btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -125,7 +125,7 @@ public class CreatePetFragment extends DialogFragment {
         mfirestore.collection("pet").document(id.getId()).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(getContext(), "Creado exitosamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Agregado exitosamente", Toast.LENGTH_SHORT).show();
                 getDialog().dismiss();
             }
         }).addOnFailureListener(new OnFailureListener() {
