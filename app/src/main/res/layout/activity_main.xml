@@ -8,14 +8,27 @@
     android:backgroundTint="#F5F5F5"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AzulOscuro"
+        android:padding="10dp"
+        android:text="MyPets"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,32 +39,41 @@
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
-            android:queryHint="Buscar" />
+            android:textColor="@color/cardview_dark_background"
+            android:textColorHint="#9A9A9A"
+            android:background="@color/Darkwhite"
+            android:backgroundTint="@color/Darkwhite"
+            android:queryHint="Buscar"
+            app:cornerRadius="50dp"
+            app:cardElevation="4dp"/>
 
         <Button
             android:id="@+id/btn_close"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FF401F"
-            android:text="cerrar sesión"
+            android:backgroundTint="@color/Verde"
+            android:text="Cerrar sesión"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
             app:cornerRadius="50dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp">
 
             <Button
                 android:id="@+id/btn_add_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/purple_500"
-                android:text="agregar fragment"
-                android:textSize="10sp"
+                android:backgroundTint="@color/AzulClaro"
+                android:text="Añadir mascota (Rápido)"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
                 app:cornerRadius="50dp" />
 
             <Space
@@ -63,15 +85,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/purple_700"
-                android:text="agregar activity"
-                android:textSize="10sp"
+                android:backgroundTint="@color/AzulClaro"
+                android:text="Añadir mascota"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
                 app:cornerRadius="50dp" />
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="12dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSingle"
