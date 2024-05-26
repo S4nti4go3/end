@@ -48,4 +48,5 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
+    implementation ("com.airbnb.android:lottie:6.4.0")
 }
