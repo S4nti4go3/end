@@ -4,15 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
     tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AzulOscuro"
+        android:padding="10dp"
+        android:text="MyPets"
+        android:textColor="@color/Darkwhite"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/pet_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo_vet"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/Darkwhite"
+        android:background="@color/Darkwhite"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,35 +50,55 @@
             android:orientation="vertical"
             android:padding="10dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REGISTRO"
+                android:textColor="@android:color/background_dark"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cardview_dark_background"
                 android:ems="10"
                 android:hint="Nombre"
+                android:textColorHint="#9A9A9A"
                 android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cardview_dark_background"
                 android:ems="10"
                 android:hint="Correo"
+                android:textColorHint="#9A9A9A"
                 android:inputType="textEmailAddress" />
 
             <EditText
                 android:id="@+id/contrasena"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cardview_dark_background"
                 android:ems="10"
                 android:hint="Contraseña"
+                android:textColorHint="#9A9A9A"
                 android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btn_registro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Registrarme" />
+                android:layout_marginTop="12dp"
+                android:text="Registrarme"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:backgroundTint="@color/AzulClaro" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
