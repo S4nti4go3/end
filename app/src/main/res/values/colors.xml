@@ -2,11 +2,9 @@
 <resources>
     <color name="AzulClaro">#015EFF</color>
     <color name="AzulOscuro">#001971</color>
-    <color name="Morado">#673AB7</color>
-    <color name="Verde">#1CF803</color>
+    <color name="VerdeOsc">#005E09</color>
+    <color name="Verde">#119F01</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="teal_700">#00796B</color>
-    <color name="purple_500">#6200EE</color>
-    <color name="purple_700">#3700B3</color>
+    <color name="Darkwhite">#F7F0F0F0</color>
 </resources>
