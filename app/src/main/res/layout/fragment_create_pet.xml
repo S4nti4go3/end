@@ -4,67 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/Darkwhite"
+    android:background="@color/Darkwhite"
+    app:cardCornerRadius="15dp"
     tools:context=".CreatePetFragment">
-
-    <TextView
-        android:id="@+id/headerTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/AzulOscuro"
-        android:padding="10dp"
-        android:text="MyPets"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/AzulOscuro"
             android:text="Mascota"
             android:textAlignment="center"
             android:textSize="24sp"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/cardview_dark_background"
             android:ems="10"
             android:hint="Nombre"
+            android:textColorHint="#9A9A9A"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/edad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/cardview_dark_background"
             android:ems="10"
             android:hint="Edad"
+            android:textColorHint="#9A9A9A"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/cardview_dark_background"
             android:ems="10"
             android:hint="Color"
+            android:textColorHint="#9A9A9A"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/precio_vacuna"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/cardview_dark_background"
             android:ems="10"
             android:hint="Precio de vacuna"
+            android:textColorHint="#9A9A9A"
             android:inputType="numberDecimal" />
 
         <Space
@@ -76,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AzulClaro"
-            android:text="Añadir mascota" />
+            android:text="Añadir mascota"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
