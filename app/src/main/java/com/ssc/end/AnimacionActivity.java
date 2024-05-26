@@ -24,7 +24,7 @@ public class AnimacionActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 // La animación ha terminado, aquí puedes iniciar otra actividad
-                Intent intent = new Intent(AnimacionActivity.this, OtraActividad.class);
+                Intent intent = new Intent(AnimacionActivity.this, LoginActivity.class); // Reemplaza ActividadPrincipal.class con la clase de tu actividad principal
                 startActivity(intent);
                 finish(); // Esto es opcional, dependiendo de tu flujo de la aplicación
             }
@@ -41,3 +41,4 @@ public class AnimacionActivity extends AppCompatActivity {
         });
     }
 }
+
