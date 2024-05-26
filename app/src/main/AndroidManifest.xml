@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_vet"
         android:supportsRtl="true"
-        android:theme="@style/Theme.End"
+        android:theme="@style/AppEnd"
         tools:targetApi="31">
 
 
