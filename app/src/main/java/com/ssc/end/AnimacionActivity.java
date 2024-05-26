@@ -3,6 +3,7 @@ package com.ssc.end;
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
@@ -15,30 +16,34 @@ public class AnimacionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_animacion);
 
         LottieAnimationView animationView = findViewById(R.id.animation_view);
-        animationView.addAnimatorListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-                // La animación ha comenzado
-            }
+        if (animationView != null) {
+            animationView.addAnimatorListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(@NonNull Animator animation) {
+                    // La animación ha comenzado
+                }
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                // La animación ha terminado, aquí puedes iniciar otra actividad
-                Intent intent = new Intent(AnimacionActivity.this, LoginActivity.class); // Reemplaza ActividadPrincipal.class con la clase de tu actividad principal
-                startActivity(intent);
-                finish(); // Esto es opcional, dependiendo de tu flujo de la aplicación
-            }
+                @Override
+                public void onAnimationEnd(@NonNull Animator animation) {
+                    // La animación ha terminado, aquí puedes iniciar otra actividad
+                    Intent intent = new Intent(AnimacionActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish(); // Esto es opcional, dependiendo de tu flujo de la aplicación
+                }
 
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                // La animación ha sido cancelada
-            }
+                @Override
+                public void onAnimationCancel(@NonNull Animator animation) {
+                    // La animación ha sido cancelada
+                }
 
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                // La animación se ha repetido
-            }
-        });
+                @Override
+                public void onAnimationRepeat(@NonNull Animator animation) {
+                    // La animación se ha repetido
+                }
+            });
+        } else {
+            // Manejo de error si la vista no se encuentra
+            finish();
+        }
     }
 }
-
