@@ -27,7 +27,7 @@ android:padding="15dp">
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/DarkGray"
+        android:background="@color/AzulOscuro"
     app:srcCompat="@drawable/pet_image" />
 </androidx.cardview.widget.CardView>
 
