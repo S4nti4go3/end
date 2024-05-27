@@ -1,113 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
-    android:background="@color/white"
+    android:background="@drawable/sdelrio"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/headerTextView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/AzulOscuro"
-        android:padding="10dp"
-        android:text="MyPets"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/pet_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_vet"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="100dp"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="12dp"
-        android:backgroundTint="@color/Darkwhite"
-        android:background="@color/Darkwhite"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/tv_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="INICIAR SESIÓN"
-                android:textColor="@android:color/background_dark"
                 android:textAlignment="center"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/correo"
+                android:id="@+id/Usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/cardview_dark_background"
                 android:ems="10"
-                android:hint="Correo"
-                android:textColorHint="#9A9A9A"
-                android:inputType="textPersonName" />
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                style="@style/CustomEditText"
+                app:layout_constraintTop_toBottomOf="@id/tv_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="55dp"/>
 
             <EditText
                 android:id="@+id/contrasena"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#9A9A9A"
                 android:ems="10"
                 android:hint="Contraseña"
-                android:textColorHint="#9A9A9A"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                style="@style/CustomEditText"
+                app:layout_constraintTop_toBottomOf="@id/correo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="55dp"/>
 
             <Button
                 android:id="@+id/btn_ingresar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/AzulOscuro"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="175dp"
+                android:fontFamily="sans-serif"
                 android:text="Ingresar"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:cornerRadius="50dp" />
+                android:textStyle="bold"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contrasena" />
 
             <Button
                 android:id="@+id/btn_register"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/AzulClaro"
-                android:text="Registrarme"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="230dp"
+                android:backgroundTint="#203B8B"
+                android:fontFamily="sans-serif"
+                android:text="Registrate"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:cornerRadius="50dp" />
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_ingresar" />
 
             <Button
                 android:id="@+id/btn_anonymous"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/Verde"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="285dp"
+                android:backgroundTint="#008989"
+                android:fontFamily="sans-serif"
                 android:text="Visitante"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:cornerRadius="50dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
+            <ImageView
+                android:id="@+id/iv_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:background="#00FDFDFD"
+                android:backgroundTint="#FFFFFF"
+                android:src="@drawable/usuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="120dp"
+                android:src="@drawable/contrasena"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+

@@ -76,17 +76,11 @@ public class PetAdapter extends FirestoreRecyclerAdapter<Pet, PetAdapter.ViewHol
         viewHolder.btn_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//          SEND DATA ACTIVITY
+
                 Intent i = new Intent(activity, CreatePetActivity.class);
                 i.putExtra("id_pet", id);
                 activity.startActivity(i);
 
-//          SEND DATA FRAGMENT
-//            CreatePetFragment createPetFragment = new CreatePetFragment();
-//            Bundle bundle = new Bundle();
-//            bundle.putString("id_pet", id);
-//            createPetFragment.setArguments(bundle);
-//            createPetFragment.show(fm, "open fragment");
             }
         });
 

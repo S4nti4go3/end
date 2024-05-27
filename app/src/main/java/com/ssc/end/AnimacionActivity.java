@@ -20,29 +20,29 @@ public class AnimacionActivity extends AppCompatActivity {
             animationView.addAnimatorListener(new Animator.AnimatorListener() {
                 @Override
                 public void onAnimationStart(@NonNull Animator animation) {
-                    // La animación ha comenzado
+
                 }
 
                 @Override
                 public void onAnimationEnd(@NonNull Animator animation) {
-                    // La animación ha terminado, aquí puedes iniciar otra actividad
+
                     Intent intent = new Intent(AnimacionActivity.this, LoginActivity.class);
                     startActivity(intent);
-                    finish(); // Esto es opcional, dependiendo de tu flujo de la aplicación
+                    finish();
                 }
 
                 @Override
                 public void onAnimationCancel(@NonNull Animator animation) {
-                    // La animación ha sido cancelada
+
                 }
 
                 @Override
                 public void onAnimationRepeat(@NonNull Animator animation) {
-                    // La animación se ha repetido
+
                 }
             });
         } else {
-            // Manejo de error si la vista no se encuentra
+
             finish();
         }
     }

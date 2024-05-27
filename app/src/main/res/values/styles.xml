@@ -1,0 +1,8 @@
+<resources>
+    <!-- Other existing styles -->
+
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">#FFFFFF</item> <!-- Color del texto blanco -->
+        <item name="android:textColorHint">#B0B0B0</item> <!-- Color del hint gris -->
+    </style>
+</resources>
