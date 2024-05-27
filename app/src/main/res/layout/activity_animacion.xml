@@ -9,8 +9,14 @@
         android:id="@+id/headerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:textStyle="bold" />
+        android:background="@color/black"
+        android:padding="10dp"
+        android:text="MyPets"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
 
     <!-- TextView de Bienvenida -->
     <TextView
@@ -18,48 +24,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/headerTextView"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="¡Bienvenido!"
         android:textAlignment="center"
-        android:textColor="@color/Darkwhite"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <!-- Animación Lottie -->
-
-    <!-- ImageView de la Foto de la Mascota -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeTextView"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/anima" />
 
+    <!-- ImageView de la Foto de la Mascota -->
     <ImageView
         android:id="@+id/pet_photo"
         android:layout_width="87dp"
         android:layout_height="81dp"
         android:layout_alignParentEnd="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    app:srcCompat="@drawable/logo_veter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/logo_veter"
      />
-
-    <TextView
-        android:id="@+id/headerTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/AzulOscuro"
-        android:padding="10dp"
-        android:text="MyPets"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-       />
 
 </RelativeLayout>
