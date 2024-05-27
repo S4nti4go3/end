@@ -12,13 +12,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
-            android:layout_width="352dp"
-            android:layout_height="403dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -36,53 +36,33 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_usuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="80dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_login"
-                app:srcCompat="@drawable/baseline_supervised_user_circle_24" />
-
             <EditText
-                android:id="@+id/correo"
-                style="@style/CustomEditText"
+                android:id="@+id/Usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="80dp"
                 android:ems="10"
                 android:hint="Usuario"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_usuario"
-                app:layout_constraintTop_toBottomOf="@id/tv_login" />
-
-            <ImageView
-                android:id="@+id/iv_contrasena"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="120dp"
+                style="@style/CustomEditText"
+                app:layout_constraintTop_toBottomOf="@id/tv_login"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/correo"
-                app:srcCompat="@drawable/baseline_password_24" />
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="55dp"/>
 
             <EditText
                 android:id="@+id/contrasena"
-                style="@style/CustomEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="120dp"
                 android:ems="10"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
+                style="@style/CustomEditText"
+                app:layout_constraintTop_toBottomOf="@id/correo"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_contrasena"
-                app:layout_constraintTop_toBottomOf="@id/correo" />
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="55dp"/>
 
             <Button
                 android:id="@+id/btn_ingresar"
@@ -133,17 +113,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_register" />
 
+            <ImageView
+                android:id="@+id/iv_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:background="#00FDFDFD"
+                android:backgroundTint="#FFFFFF"
+                android:src="@drawable/baseline_supervised_user_circle_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="120dp"
+                android:src="@drawable/baseline_password_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/pet_photo"
-        android:layout_width="87dp"
-        android:layout_height="81dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/logo_vet" />
-
 </RelativeLayout>
