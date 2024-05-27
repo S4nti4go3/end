@@ -58,12 +58,20 @@ public class CreatePetFragment extends DialogFragment {
                     String namepet = name.getText().toString().trim();
                     String agepet = age.getText().toString().trim();
                     String colorpet = color.getText().toString().trim();
-                    Double precio_vacunapet = Double.parseDouble(precio_vacuna.getText().toString().trim());
+                    String precio_vacunapetText = precio_vacuna.getText().toString().trim();
 
-                    if(namepet.isEmpty() && agepet.isEmpty() && colorpet.isEmpty()){
-                        Toast.makeText(getContext(), "Ingresar los datos", Toast.LENGTH_SHORT).show();
-                    }else{
-                        postPet(namepet, agepet, colorpet, precio_vacunapet);
+                    if (namepet.isEmpty() || agepet.isEmpty() || colorpet.isEmpty() || precio_vacunapetText.isEmpty()) {
+                        // Si algún campo está vacío, muestra un mensaje para completar todos los campos
+                        Toast.makeText(getContext(), "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Si todos los campos están completos, procede con el proceso de agregar o actualizar la mascota
+                        Double precio_vacunapet = Double.parseDouble(precio_vacunapetText);
+
+                        if (id_pet == null || id_pet.isEmpty()) {
+                            postPet(namepet, agepet, colorpet, precio_vacunapet);
+                        } else {
+                            updatePet(namepet, agepet, colorpet, precio_vacunapet);
+                        }
                     }
                 }
             });

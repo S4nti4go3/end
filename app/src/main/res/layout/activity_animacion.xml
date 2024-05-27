@@ -2,17 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
-<com.airbnb.lottie.LottieAnimationView
-android:id="@+id/animation_view"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-app:lottie_rawRes="@raw/anima"
-app:lottie_autoPlay="true"
-app:lottie_loop="false" />
+    <!-- TextView del Encabezado -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:padding="10dp"
+        android:text="MyPets"
+        android:textColor="@color/Darkwhite"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
-    </RelativeLayout>
+    <!-- TextView de Bienvenida -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTextView"
+        android:layout_marginTop="20dp"
+        android:text="¡Bienvenido!"
+        android:textAlignment="center"
+        android:textColor="@color/Darkwhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
+    <!-- Animación Lottie -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/anima" />
 
+    <!-- ImageView de la Foto de la Mascota -->
+    <ImageView
+        android:id="@+id/pet_photo"
+        android:layout_width="87dp"
+        android:layout_height="81dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/logo_vet" />
 
+</RelativeLayout>

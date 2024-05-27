@@ -1,5 +1,6 @@
 package com.ssc.end;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText email, password;
     FirebaseAuth mAuth;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                 String emailUser = email.getText().toString().trim();
                 String passUser = password.getText().toString().trim();
 
-                if (emailUser.isEmpty() && passUser.isEmpty()){
-                    Toast.makeText(LoginActivity.this, "Ingresar los datos", Toast.LENGTH_SHORT).show();
-                }else{
+                if (emailUser.isEmpty() || passUser.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Por favor ingresa todos los datos", Toast.LENGTH_SHORT).show();
+                } else {
                     loginUser(emailUser, passUser);
                 }
             }

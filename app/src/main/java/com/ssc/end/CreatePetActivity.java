@@ -100,7 +100,7 @@ public class CreatePetActivity extends AppCompatActivity {
             }
         });
 
-        if (id == null || id == ""){
+        if (id == null || id.isEmpty()){
             linearLayout_image_btn.setVisibility(View.GONE);
             btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -108,16 +108,19 @@ public class CreatePetActivity extends AppCompatActivity {
                     String namepet = name.getText().toString().trim();
                     String agepet = age.getText().toString().trim();
                     String colorpet = color.getText().toString().trim();
-                    Double precio_vacunapet = Double.parseDouble(precio_vacuna.getText().toString().trim());
+                    String precio_vacunapetText = precio_vacuna.getText().toString().trim();
 
-                    if(namepet.isEmpty() && agepet.isEmpty() && colorpet.isEmpty()){
-                        Toast.makeText(getApplicationContext(), "Ingresar los datos", Toast.LENGTH_SHORT).show();
-                    }else{
+                    if (namepet.isEmpty() || agepet.isEmpty() || colorpet.isEmpty() || precio_vacunapetText.isEmpty()) {
+                        // Si algún campo está vacío, muestra un mensaje para completar todos los campos
+                        Toast.makeText(getApplicationContext(), "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Si todos los campos están completos, procede con el proceso de agregar la mascota
+                        Double precio_vacunapet = Double.parseDouble(precio_vacunapetText);
                         postPet(namepet, agepet, colorpet, precio_vacunapet);
                     }
                 }
             });
-        }else{
+        } else {
             idd = id;
             btn_add.setText("Actualizar");
             getPet(id);
@@ -127,11 +130,14 @@ public class CreatePetActivity extends AppCompatActivity {
                     String namepet = name.getText().toString().trim();
                     String agepet = age.getText().toString().trim();
                     String colorpet = color.getText().toString().trim();
-                    Double precio_vacunapet = Double.parseDouble(precio_vacuna.getText().toString().trim());
+                    String precio_vacunapetText = precio_vacuna.getText().toString().trim();
 
-                    if(namepet.isEmpty() && agepet.isEmpty() && colorpet.isEmpty()){
-                        Toast.makeText(getApplicationContext(), "Ingresar los datos", Toast.LENGTH_SHORT).show();
-                    }else{
+                    if (namepet.isEmpty() || agepet.isEmpty() || colorpet.isEmpty() || precio_vacunapetText.isEmpty()) {
+                        // Si algún campo está vacío, muestra un mensaje para completar todos los campos
+                        Toast.makeText(getApplicationContext(), "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Si todos los campos están completos, procede con el proceso de actualizar la mascota
+                        Double precio_vacunapet = Double.parseDouble(precio_vacunapetText);
                         updatePet(namepet, agepet, colorpet, precio_vacunapet, id);
                     }
                 }

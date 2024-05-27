@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="AzulClaro">#015EFF</color>
     <color name="AzulOscuro">#001971</color>
-    <color name="VerdeOsc">#005E09</color>
     <color name="Verde">#119F01</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Darkwhite">#F7F0F0F0</color>
+    <color name="DarkGray">#333333</color> <!-- Color de fondo nocturno -->
+    <color name="AzulClaro">#2196F3</color> <!-- Color de fondo del botón de edición nocturno -->
+    <color name="VerdeOsc">#4CAF50</color> <!-- Color de fondo del botón de cierre de sesión nocturno -->
 </resources>
