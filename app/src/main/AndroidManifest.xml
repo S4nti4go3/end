@@ -8,9 +8,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo_vet"
+        android:icon="@drawable/logo_vete"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_vet"
+        android:roundIcon="@drawable/logo_vete"
         android:supportsRtl="true"
         android:theme="@style/AppEnd"
         tools:targetApi="31">

@@ -107,6 +107,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/logo_vet" />
+        app:srcCompat="@drawable/logo_vete" />
 
 </RelativeLayout>
