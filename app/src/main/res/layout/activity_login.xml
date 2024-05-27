@@ -70,7 +70,7 @@
                 android:layout_marginTop="370dp"
                 android:backgroundTint="#203B8B"
                 android:fontFamily="sans-serif"
-                android:text="Registrate"
+                android:text="Regístrate"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
                 android:textStyle="bold"
