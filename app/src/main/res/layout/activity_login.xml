@@ -6,7 +6,7 @@
     android:background="@drawable/sdelrio"
     tools:context=".LoginActivity">
 
-    <!-- Agrega el ImageView para el logo_login -->
+    <!--ImageView para el logo_login -->
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="110dp"
@@ -31,7 +31,8 @@
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logoImageView">
+            app:layout_constraintTop_toBottomOf="@id/logoImageView"
+            tools:ignore="NotSibling">
 
             <EditText
                 android:id="@+id/Usuario"
@@ -68,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="370dp"
-                android:backgroundTint="#203B8B"
+                android:backgroundTint="@color/AzulOscuro"
                 android:fontFamily="sans-serif"
                 android:text="Regístrate"
                 android:textColor="@android:color/white"
@@ -118,7 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="420dp"
-                android:backgroundTint="#008989"
+                android:backgroundTint="@color/VerdeOsc"
                 android:fontFamily="sans-serif"
                 android:text="Visitante"
                 android:textColor="@android:color/white"
@@ -141,4 +142,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
-
